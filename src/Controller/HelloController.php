@@ -5,6 +5,6 @@ class HelloController extends AppController {
     public $name = 'Hello';
     //public $autoRender = false;
     public function index() {
-        $this->viewBuilder()->autoLayout(false);
+        //$this->viewBuilder()->autoLayout(false);
     }
 }
