@@ -2,9 +2,14 @@
 namespace App\Controller;
 
 class HelloController extends AppController {
-    public $name = 'Hello';
-    //public $autoRender = false;
+    public function initialize() {
+        $this->name = 'Hello';
+        $this->viewBuilder()->autoLayout(true);
+        $this->viewBuilder()->Layout('Hello');
+    }
     public function index() {
-        //$this->viewBuilder()->autoLayout(false);
+    }
+    public function other() {
+        $this->viewBuilder()->autoLayout(false);
     }
 }
