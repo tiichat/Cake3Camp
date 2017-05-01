@@ -32,6 +32,8 @@ class HelloController extends AppController
         $this->name = 'Hello';
         $this->viewBuilder()->autoLayout(true);
         $this->viewBuilder()->Layout('Hello');
+        $this->set('msg', 'Hello/index');
+        $this->set('footer', 'Hello\footer2');
     }
 
     /**
@@ -52,6 +54,23 @@ class HelloController extends AppController
         $this->set('msg', 'ヘッダエレメント');
         $n = rand(1, 2);
         $this->set('footer', 'Hello\footer' . $n);
+    }
+
+    /**
+     * フォームの値を受け取り、次画面に情報を引き渡すサンプル
+     *
+     * @return void
+     */
+    public function sendForm()
+    {
+        $str = $this->request->query['text1'];
+        $result = "";
+        if ($str != "") {
+            $result = "you type: " . $str;
+        } else {
+            $result = "empty.";
+        }
+        $this->set("result", h($result));
     }
 
     /**
