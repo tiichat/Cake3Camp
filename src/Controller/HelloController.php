@@ -35,7 +35,15 @@ class HelloController extends AppController
     }
 
     /**
-     * /hello を処理
+     * CAKE3APP プロジェクトの HelloController なので、
+     *   localhost:8765/hello  -> bin\cake server時
+     *   http://cake3app/hello  -> apacheにデプロイ時
+     * にリクエストを投げると、当メソッドが呼び出される。
+     *
+     * $autoLayout が trueの場合、レイアウトにフォワードする。
+     * initialize()で Layout('Hello') を指定しているので、
+     * hello.ctp がレイアウトとして使用される。
+     * Layoutを設定しない場合、default.ctp が使用される。
      *
      * @return void
      */
