@@ -16,7 +16,8 @@
         "cakephp/debug_kit": "~3.2",
         "cakephp/bake": "~1.1",
         "squizlabs/php_codesniffer": "^2.8",
-        "phpmd/phpmd" : "@stable"
+        "phpmd/phpmd" : "@stable",
+        "cakephp/cakephp-codesniffer": "2.*"
     },
     "suggest": {
         "markstory/asset_compress": "An asset compression plugin which provides file concatenation and a flexible filter system for preprocessing and minification.",
