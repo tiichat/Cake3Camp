@@ -49,6 +49,9 @@ class HelloController extends AppController
      */
     public function index()
     {
+        $this->set('msg', 'ヘッダエレメント');
+        $n = rand(1, 2);
+        $this->set('footer', 'Hello\footer' . $n);
     }
 
     /**
